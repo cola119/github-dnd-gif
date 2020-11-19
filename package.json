@@ -1,0 +1,23 @@
+{
+  "name": "chrome-extension-typescript-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && webpack"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "0.0.122",
+    "@types/copy-webpack-plugin": "^6.0.0",
+    "@types/webpack": "^4.41.22",
+    "copy-webpack-plugin": "^6.1.0",
+    "ts-loader": "^8.0.3",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
