@@ -7,6 +7,7 @@ const config: ConfigurationFactory = () => {
     entry: {
       background: path.join(__dirname, "src", "background.ts"),
       popup: path.join(__dirname, "src", "popup.ts"),
+      content_script: path.join(__dirname, "src", "content_script.ts"),
     },
     output: {
       path: path.join(__dirname, "dist"),
