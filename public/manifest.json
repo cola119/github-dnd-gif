@@ -3,6 +3,7 @@
     "description": "extension description",
     "version": "1.0",
     "manifest_version": 2,
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://unpkg.com/@ffmpeg/core@0.8.4/dist/ffmpeg-core.js; object-src 'self'",
     "icons": {
         "32": "images/icon_32.png",
         "48": "images/icon_48.png"
@@ -28,7 +29,7 @@
         ],
         "persistent": false
     },
-    "page_action": {
+    "browser_action": {
         "default_popup": "popup.html",
         "default_icon": {
             "32": "images/icon_32.png"

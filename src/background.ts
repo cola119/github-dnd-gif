@@ -1,17 +1,7 @@
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.storage.sync.set({ color: "#3aa757" }, () => {
-    console.log("The color is green.");
-  });
-  chrome.declarativeContent.onPageChanged.removeRules(undefined, () => {
-    chrome.declarativeContent.onPageChanged.addRules([
-      {
-        conditions: [
-          new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: { hostEquals: "developer.chrome.com" },
-          }),
-        ],
-        actions: [new chrome.declarativeContent.ShowPageAction()],
-      },
-    ]);
-  });
+// import { createFFmpeg, fetchFile } from "@ffmpeg/ffmpeg";
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  const file = message.file as File;
+  console.log(file);
+  console.log(file.name);
 });
